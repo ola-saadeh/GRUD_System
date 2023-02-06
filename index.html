@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- webfonts -->
+    <link href="vendor/all.min.css" rel="stylesheet"/>
+    <!-- customized css -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- bootstap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+<body>
+    <button class="btn add-btn mt-3"  >
+        <!-- <input readonly class="add-btn-text btn border-0" id="addBtn1" value="Ad"> -->
+        <span class="add-btn-icon">+</span>
+    </button>
+    <div class="container w-75 mt-5"> 
+        <h1 class="text-center pt-5 mb-5">CRUD System</h1>
+    </div>
+    <div class="row d-flex ">
+        <div class="col-md-6 position-relative">
+            
+            <div class="sTable  position-absolute">
+                
+                <div class="container fSec w-75 text-center">
+                    <h4 class="mt-5">Search for courses </h4>
+                    <input type="search" placeholder="search..." id="search" class="form-control ola-control mt-5" onkeyup="serachCourses()">
+        
+                    <button id="deleteBtn" class="delete-btn my-5">
+                        <span class="delete-btn-text">Delete All</span>
+                        <span class="delete-btn-icon">&times;</span>
+                    </button>
+                    <div class="table-responsive">
+                        <table class="table1 align-middle table">
+                        
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>name</th>
+                                    <th>category</th>
+                                    <th>price</th>
+                                    <th>description</th>
+                                    <th>update</th>
+                                    <th>delete</th>
+                                </tr>
+                            </thead>
+            
+                            <tbody id="tableBody">
+                               
+                         
+                            </tbody>
+                        
+                        </table>
+                    </div>
+                   
+           
+                    
+                </div>
+            </div>
+            <div class="hero-mask position-absolute"></div>
+
+        </div>
+        <div class=" col-md-6">
+            <div class="addsec">
+                <form class="ola-form w-75 ">
+                    <div class="mb-3">
+                        <label for="courseName">course name <span class="text-danger">*</span></label>
+                        <input class="inputs ola-control form-control" type="text" placeholder="cource name" id="courseName">
+                        <div id="nameAlert" class="alert alert-danger rounded-pill d-none">please start with capital later & no numbers & 3-10 letter</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="courseCategory">course category</label>
+                        <input class="inputs ola-control form-control" type="text" placeholder="cource category" id="courseCategory">
+                        <div id="catAlert" class="alert alert-danger rounded-pill d-none">please start with capital later and min 3 and max 8 </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="coursePrice">course price</label>
+                        <input class="inputs ola-control form-control" type="number" placeholder="cource price" id="coursePrice">
+                        <div id="priceAlert" class="alert alert-danger rounded-pill d-none">price must be between 20 and 9999</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="courseDescription">course description</label>
+                        <textarea class="inputs ola-control form-control" placeholder="course description"  id="courseDescription"></textarea>
+                        <div id="descriptionAlert" class="alert alert-danger rounded-pill d-none">description must be between 1 and 150 letter</div>
+                    </div>
+                    <div id="buttons" class="buttons">
+                        <button class="btn add-btn mt-3"  >
+                            <input readonly disabled class="add-btn-text btn border-0" id="addBtn" value="Add Course">
+                            <span class="add-btn-icon">+</span>
+                        </button>
+                        <button class="btnClear1 btn delete-btn mt-3" type="reset">
+                            <span class="delete-btn-text">Clear</span>
+                            <span class="delete-btn-icon">&times;</span>    
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- customized javaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
